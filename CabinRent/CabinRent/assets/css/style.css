@@ -1,0 +1,646 @@
+/*CABINRENT CSS GENERAL*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#2F5D50;
+    --primary-dark:#24473D;
+    --primary-light:#EAF5F1;
+
+    --white:#FFFFFF;
+    --background:#F5F7FA;
+
+    --text:#2F3542;
+    --text-light:#7F8C8D;
+
+    --border:#E9ECEF;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--background);
+
+}
+
+/*==================================================
+    LOGIN
+==================================================*/
+
+body:has(.login-container){
+
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+        url("../img/backgrounds/cabinabosque.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.login-card{
+
+    width:430px;
+
+    background:rgba(255,255,255,.95);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    animation:fade .7s;
+
+}
+
+.logo{
+
+    width:120px;
+
+    display:block;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.icono-cabana{
+
+    width:90px;
+
+    height:90px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto auto 20px;
+
+}
+
+.icono-cabana i{
+
+    font-size:40px;
+
+}
+
+h1{
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    margin-bottom:30px;
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.form-control{
+
+    height:52px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 .2rem rgba(47,93,80,.15);
+
+}
+
+/* ===== SOLO PARA EL LOGIN ===== */
+
+body:has(.login-container) .btn-success{
+
+    background:var(--primary);
+
+    border:none;
+
+    border-radius:12px;
+
+    height:52px;
+
+    font-weight:600;
+
+}
+
+body:has(.login-container) .btn-success:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.desarrollado{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+.desarrollado p{
+
+    color:#6c757d;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+.desarrollado img{
+
+    width:120px;
+
+    display:block;
+
+    margin:0 auto;
+
+}
+
+.desarrollado h6{
+
+    color:var(--text);
+
+    font-weight:600;
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+}
+
+.desarrollado small{
+
+    display:block;
+
+    color:#6c757d;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+}
+
+
+/*DASHBOARD*/
+
+.app{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.sidebar{
+
+    width:260px;
+
+    background:white;
+
+    border-right:1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:var(--shadow);
+
+}
+
+.sidebar-header{
+
+    padding:30px 25px;
+
+    text-align:center;
+
+}
+
+.logo-icon{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+}
+
+.sidebar-header h3{
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    color:var(--primary);
+
+}
+
+.sidebar-header span{
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.sidebar-menu{
+
+    list-style:none;
+
+    padding:0 15px;
+
+}
+
+.sidebar-menu li{
+
+    margin-bottom:8px;
+
+}
+
+.sidebar-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 15px;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.sidebar-menu a:hover{
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+}
+
+.sidebar-menu a.active{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.sidebar-footer{
+
+    padding:20px;
+
+    border-top:1px solid var(--border);
+
+}
+
+.sidebar-footer a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#dc3545;
+
+    font-weight:600;
+
+}
+
+.main-content{
+
+    flex:1;
+
+    background:var(--background);
+
+}
+
+.navbar{
+
+    height:75px;
+
+    background:white !important;
+
+    box-shadow:var(--shadow);
+
+}
+
+.dashboard-card{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.icon-box{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:26px;
+
+}
+
+.icon-box.success{
+
+    background:#2F5D50;
+
+}
+
+.icon-box.primary{
+
+    background:#0D6EFD;
+
+}
+
+.icon-box.warning{
+
+    background:#FFC107;
+
+    color:#333;
+
+}
+
+.icon-box.danger{
+
+    background:#DC3545;
+
+}
+
+.card{
+
+    border:none;
+
+    border-radius:18px;
+
+}
+
+.card-body{
+
+    padding:25px;
+
+}
+
+.table{
+
+    background:white;
+
+}
+
+.table thead{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.table thead th{
+
+    border:none;
+
+}
+
+.table tbody tr:hover{
+
+    background:#F8F9FA;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/*BOTONES DEL SISTEMA */
+
+.btn-success{
+
+    background:var(--primary);
+    border-color:var(--primary);
+    color:#fff;
+
+    height:auto;
+    min-height:38px;
+
+    padding:.375rem .75rem;
+
+    border-radius:.375rem;
+
+    font-weight:500;
+
+}
+
+.btn-success:hover{
+
+    background:var(--primary-dark);
+    border-color:var(--primary-dark);
+    color:#fff;
+
+}
+
+.btn-outline-success{
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline-success:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media(max-width:991px){
+
+    .sidebar{
+
+        width:100%;
+
+        min-height:auto;
+
+    }
+
+    .app{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .login-card{
+
+        width:95%;
+
+        padding:30px;
+
+    }
+
+    .container-fluid{
+
+        padding:20px !important;
+
+    }
+
+}
+
+/*FOOTER DEL SISTEMA*/
+
+.system-footer{
+
+    background:#FFFFFF;
+
+    border-top:1px solid var(--border);
+
+    padding:20px 15px;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+.system-footer strong{
+
+    color:var(--primary);
+
+}
